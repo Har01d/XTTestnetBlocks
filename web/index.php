@@ -42,7 +42,7 @@
 
 	require_once('../include.php');
 
-	$q       = pg_query('SELECT * FROM XTTestnetBlocks ORDER BY height DESC LIMIT 1000');
+	$q       = pg_query('SELECT * FROM XTTestnetBlocks ORDER BY height DESC LIMIT '.BLOCKS_TO_PROCESS);
 	$classes = $blocks = $sizes = [];
 
 	$i = 0;
