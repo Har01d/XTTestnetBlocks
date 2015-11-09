@@ -1,8 +1,12 @@
+<?php
+require_once('../include.php');
+?>
+
 <!DOCTYPE html>
 <!-- (c) Har01d -->
 <html lang="en">
 <head>
-	<title>Latest 1000 Testnet Blocks</title>
+	<title>Latest <?= BLOCKS_TO_PROCESS ?> Testnet Blocks</title>
 
 	<style>
 		* {
@@ -35,14 +39,12 @@
 
 </head>
 <body>
-<h1>Latest 1000 Testnet Blocks</h1>
+<h1>Latest <?= BLOCKS_TO_PROCESS ?> Testnet Blocks</h1>
 <table>
 
 	<?php
 
-	require_once('../include.php');
-
-	$q       = pg_query('SELECT * FROM XTTestnetBlocks ORDER BY height DESC LIMIT '.BLOCKS_TO_PROCESS);
+	$q       = pg_query('SELECT * FROM XTTestnetBlocks ORDER BY height DESC LIMIT ' . BLOCKS_TO_PROCESS);
 	$classes = $blocks = $sizes = [];
 
 	$i = 0;
