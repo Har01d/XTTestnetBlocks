@@ -4,13 +4,20 @@
 
 It's mostly untested and isn't my best code, so run it on your own risk :)
 
+## Requirements
+
+* Bitcoin XT full node
+* PHP 5.6+ with Curl
+* PostgreSQL
+* Any webserver in case you want to show the data
+
 ## How do I install and run it?
 
-1. Set up a Bitcoin XT testnet full node using `testnet=1` and `server=1` in `bitcoin.conf`
+1. Set up a Bitcoin XT testnet full node, set `rpcuser`, `rpcpassword`, `rpcport`, `testnet=1` and `server=1` in `bitcoin.conf`
 2. You need to set up a PostgreSQL database, then run a script from `sql.sql`
 3. Update `config.php` with your settings, "daemon" configuration (login, password and port) should correspond to the values from `bitcoin.conf` (rpcuser, rpcpassword, rpcport)
-4. Set up a cron service to run `/usr/bin/php bootstrap.php` every 5-10 minutes (each run will clean and refill the database)
-5. You can see the results in `web/index.php` (make it in a public folder)
+4. Set up a cron service to run `/usr/bin/php bootstrap.php` every 5-10 minutes. Each run will clean and refill the database). That can be done by pasting `*/5 * * * * /usr/bin/php /path/to/bootstrap.php` into `crontab -e` 
+5. You can see the results in `index.php` (make `web` a public folder)
 
 If you want to analyze more than 1,000 blocks, you might want to change `BLOCKS_TO_PROCESS` constant in `config.php`
 
