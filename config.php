@@ -13,4 +13,4 @@ const POSTGRESQL_DB       = '';
 const POSTGRESQL_LOGIN    = '';
 const POSTGRESQL_PASSWORD = '';
 
-const FIRST_BLOCK_TO_PROCESS = 580000;
+const BLOCKS_TO_PROCESS = 1000;

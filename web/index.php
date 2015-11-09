@@ -61,7 +61,7 @@
 
 	$block = 0;
 
-	for ($i = 0; $i < 20; $i++)
+	for ($i = 0; $i < (BLOCKS_TO_PROCESS / 50); $i++)
 	{
 		echo '<tr>';
 		for ($j = 0; $j < 50; $j++)
@@ -79,7 +79,7 @@
 </table>
 <br/>
 
-<h2>Latest block: <?= $blocks[999] ?></h2>
+<h2>Latest block: <?= $blocks[0] ?></h2>
 
 <br/>
 <table>
