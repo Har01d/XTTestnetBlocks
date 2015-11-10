@@ -100,7 +100,7 @@ require_once('../include.php');
 </table>
 
 <br/>
-<a href="https://github.com/Har01d/XTTestnetBlocks">GitHub</a>
+<a target="_blank" href="https://github.com/Har01d/XTTestnetBlocks">GitHub</a>
 
 </body>
 </html>
