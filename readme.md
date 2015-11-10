@@ -22,6 +22,7 @@ It's mostly untested and isn't my best code, so run it on your own risk :)
 
 If you want to analyze more than 1,000 blocks, you might want to change `BLOCKS_TO_PROCESS` constant in `config.php`
 
-## Live example
+## Live examples
 
-by https://www.reddit.com/user/TeranNotTerran: http://23.253.174.52/xttestnetblocks.html
+by /u/hellobitcoinworld: http://xtnodes.com/#testnet
+by /u/TeranNotTerran: http://23.253.174.52/xttestnetblocks.html
