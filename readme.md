@@ -24,5 +24,5 @@ If you want to analyze more than 1,000 blocks, you might want to change `BLOCKS_
 
 ## Live examples
 
-by /u/hellobitcoinworld: http://xtnodes.com/#testnet
-by /u/TeranNotTerran: http://23.253.174.52/xttestnetblocks.html
+* by /u/hellobitcoinworld: http://xtnodes.com/#testnet
+* by /u/TeranNotTerran: http://23.253.174.52/xttestnetblocks.html
