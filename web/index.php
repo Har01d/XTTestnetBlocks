@@ -20,10 +20,6 @@ require_once('../include.php');
 			border: 1px dotted black;
 		}
 
-		.tdy {
-			width: 10px;
-		}
-
 		.bip101 {
 			background-color: #ffe2e7;
 		}
@@ -34,6 +30,12 @@ require_once('../include.php');
 
 		.core {
 			background-color: #d8e0ef;
+		}
+
+		.explorer-link {
+			display: block;
+			height: 10px;
+			width: 10px;
 		}
 	</style>
 
@@ -70,7 +72,8 @@ require_once('../include.php');
 		{
 			$class = $classes[($block)];
 			$size  = number_format($sizes[($block)] / 1024 / 1024, 2);
-			echo '<td class="tdw ' . $class . '" title="Block #' . $blocks[$block] . ', ' . $size . ' MB"></td>';
+			echo '<td class="tdw ' . $class . '"><a class="explorer-link" title="Block #' . $blocks[$block] . ', ' . $size .
+				 ' MB" href="http://insight.xtnodes.com/block-index/' . $blocks[$block] . '"></a></td>';
 			$block++;
 		}
 		echo '</tr>';
@@ -79,23 +82,21 @@ require_once('../include.php');
 	?>
 
 </table>
-<br/>
 
 <h2>Latest block: <?= $blocks[0] ?></h2>
 
-<br/>
 <table>
 	<tr>
-		<td> - BIP 101 block with size > 1 Mb</td>
-		<td class="tdy bip101plus"></td>
+		<td class="tdw bip101plus"></td>
+		<td> - BIP 101 block with size > 1 MB</td>
 	</tr>
 	<tr>
-		<td> - BIP 101 block with size <= 1 Mb</td>
-		<td class="tdy bip101"></td>
+		<td class="tdw bip101"></td>
+		<td> - BIP 101 block with size <= 1 MB</td>
 	</tr>
 	<tr>
+		<td class="tdw core"></td>
 		<td>- standard block</td>
-		<td class="tdy core"></td>
 	</tr>
 </table>
 
