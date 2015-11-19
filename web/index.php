@@ -35,6 +35,10 @@ require_once('../include.php');
 		.core {
 			background-color: #d8e0ef;
 		}
+		.link {
+			height: 10px;
+			width: 10px;
+		}
 	</style>
 
 </head>
@@ -70,7 +74,7 @@ require_once('../include.php');
 		{
 			$class = $classes[($block)];
 			$size  = number_format($sizes[($block)] / 1024 / 1024, 2);
-			echo '<td class="tdw ' . $class . '" title="Block #' . $blocks[$block] . ', ' . $size . ' MB"></td>';
+			echo '<td class="tdw ' . $class . '" title="Block #' . $blocks[$block] . ', ' . $size . ' MB"><a href="http://insight.xtnodes.com/block/' . $block_hash . '"><div class="link"></div></a></td>';
 			$block++;
 		}
 		echo '</tr>';
